@@ -46,7 +46,8 @@ export class Canvas {
   }
 
   update() {
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.ctx.fillStyle = "rgba(0, 0, 0, .1)";
+    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
     for (const boid of this.boids) {
       boid.edges(this.canvas.width, this.canvas.height);
